@@ -1,21 +1,60 @@
+/* Cor de fundo da página */
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
+    background-color: #7db3fa; 
+    font-family: sans-serif; 
 }
-label {
-    display: block;
-    margin-top: 10px;
+
+/* Estilo para o título principal */
+h1 {
+    text-align: center;
+    color: #3e4feb; 
+    font-size: 2em;
 }
-input, select {
-    width: 300px;
-    padding: 8px;
-    margin-top: 4px;
+
+/* Estilo para os subtítulos h2 (labels) */
+h2 {
+    color: #735df0;
+    font-size: 1.2em;
 }
-.error {
-    color: red;
-    font-size: 0.9em;
+
+/* Estilo para os inputs (campos de texto) */
+input[type="text"], select {
+    padding: 10px; /* Espaço dentro do campo */
+    margin: 10px 0; /* Espaço acima e abaixo */
+    width: 95%; /* Largura de 100% */
+    border: 2px solid #ccc; /* Cor da borda */
+    border-radius: 4px; /* Bordas arredondadas */
 }
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
+
+/* Estilo para o botão de envio */
+button[type="submit"] {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    padding: 15px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 1em;
+    cursor: pointer; /* Cursor de mãozinha ao passar por cima */
+    width: 100%; /* Largura de 100% */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para o formulário */
+form {
+    max-width: 600px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    background-color: white; /* Cor de fundo branca */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para o campo de seleção de estados */
+select {
+    font-size: 1em;
+    color: #735df0;
+    background-color: #fff;
 }

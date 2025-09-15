@@ -1,25 +1,5 @@
 <?php
 
-function validarCPF($cpf) {
-    // Remove caracteres não numéricos
-    $cpf = preg_replace('/[^0-9]/', '', $cpf);
-    if (strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)) {
-        return false;
-    }
-
-    // Valida primeiro dígito
-    for ($t = 9; $t < 11; $t++) {
-        $soma = 0;
-        for ($i = 0; $i < $t; $i++) {
-            $soma += $cpf[$i] * (($t + 1) - $i);
-        }
-        $resto = (10 * $soma) % 11;
-        if ($resto == 10) $resto = 0;
-        if ($cpf[$t] != $resto) return false;
-    }
-    return true;
-}
-
 function validarTexto($texto) {
     return preg_match('/^[A-Za-zÀ-ÿ\s]+$/u', $texto);
 }
